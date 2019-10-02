@@ -1,0 +1,10 @@
+http://localhost:3030/read-model/news/85f85e90-adc5-49a5-9b52-22a2174deb2f
+
+
+###
+
+http://localhost:3030/news?$select[]=title&$select[]=_id
+
+###
+
+http://localhost:3030/news-stats?$sort[comments]=-1&$sort[voted]=-1

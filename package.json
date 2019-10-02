@@ -1,0 +1,93 @@
+{
+  "name": "fethersjs-cqrs",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "David Nussio",
+    "email": "david.nussio@eoc.ch"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/",
+    "config": "config/"
+  },
+  "engines": {
+    "node": "^10.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "test": "npm run eslint && npm run jest",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "dev": "nodemon src/",
+    "start": "node src/",
+    "jest": "jest  --forceExit"
+  },
+  "dependencies": {
+    "@feathersjs/configuration": "^4.3.1",
+    "@feathersjs/errors": "^4.3.1",
+    "@feathersjs/express": "^4.3.1",
+    "@feathersjs/feathers": "^4.3.1",
+    "@feathersjs/socketio": "^4.3.1",
+    "commander": "^3.0.1",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "faker": "^4.1.0",
+    "fastest-validator": "^0.6.17",
+    "feathers-hooks-common": "^4.20.7",
+    "feathers-nedb": "^5.0.1",
+    "helmet": "^3.21.0",
+    "immer": "^4.0.0",
+    "inquirer": "^7.0.0",
+    "nedb": "^1.8.0",
+    "pino": "^5.13.3",
+    "pino-pretty": "^3.2.1",
+    "resolve-command": "^0.20.25",
+    "resolve-es": "^0.20.25",
+    "resolve-snapshot-lite": "^0.20.28",
+    "resolve-storage-lite": "^0.20.25",
+    "serve-favicon": "^2.5.0",
+    "uuid": "^3.3.3",
+    "vorpal": "^1.12.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "axios": "^0.19.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "fakerator": "^0.3.0",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.5",
+    "nodemon": "^1.19.2",
+    "post-merge-install": "^0.1.0",
+    "prettier": "^1.18.2"
+  },
+  "lint-staged": {
+    "*.{json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-merge": "post-merge-install",
+      "post-rebase": "post-merge-install"
+    }
+  }
+}
